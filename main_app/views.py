@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 
-
-
 class Home(TemplateView):
     template_name = "home.htm"
+
 # Create your views here.
+
 class City:
     def __init__(self, name, bio, img):
         self.name = name
