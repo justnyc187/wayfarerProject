@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from django.views.generic.base import TemplateView
 
+
+
+class Home(TemplateView):
+    template_name = "home.htm"
 # Create your views here.
 class City:
     def __init__(self, name, bio, img):
@@ -7,10 +12,6 @@ class City:
         self.bio = bio
         self.img = img
 
-<<<<<<< HEAD
-
-
-=======
 cities = [
     City("New York", "The Big Apple", "pictureUrl"),
     City("Dallas", "Everything's bigger in Texas", "pictureUrl"),
@@ -25,4 +26,4 @@ cities = [
     City("Chicago", "The Windy City", "pictureUrl"),
     City("London", "See the Big ben Tower", "pictureUrl"),
 ]
->>>>>>> 105544837bb6c9b00d5fbf45fb43f5ea93afd433
+
