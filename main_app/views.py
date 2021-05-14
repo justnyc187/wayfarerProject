@@ -6,7 +6,7 @@ from django.views.generic.base import TemplateView
 # Create your views here.
 
 class Home(TemplateView):
-    template_name = "home.htm"
+    template_name = "home.html"
 '''
 class City:
     def __init__(self, name, bio, img):
