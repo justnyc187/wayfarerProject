@@ -3,55 +3,62 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-      <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wayfarer</title>
-  </head>
-  <body >
-      <div class="container">
-        <div class="row header">
-          <nav class="navbar is-black" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand col-4">
-              <a class="navbar-item" href="/">Wayfarer</a>
-            </div>
-            <div>
-              <a class="navbar-item" href="">Sign Up</a>
-            </div>
-            <div>
-              <a class="navbar-item col-4" href="">Sign In</a>
-            </div>
-            </nav>
-            </div>
-          </div>
-          <div class="splide" data-splide='{"type":"loop","perPage":3}'>
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-92866.jpg" alt=""></li>
-                <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-221299.jpg" alt=""></li>
-                <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-534362.jpg" alt=""></li>
-                <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-2957060.webp" alt=""></li>
-                <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-3056057.jpg" alt=""></li>
-                <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-3182452.jpg" alt=""></li>
-              </ul>
-            </div>
-          </div>
 
-          <div class="container">
-      
-            {% block content %}{% endblock %}
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wayfarer</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row header">
+      <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand col-4">
+          <a class="navbar-item" href="/">Wayfarer</a>
         </div>
-  </body>
-  <script>
-    new Splide('.splide').mount();
-  </script>
+        <div>
+          <a class="navbar-item" href="">Sign Up</a>
+        </div>
+        <div>
+          <a class="navbar-item col-4" href="">Sign In</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="splide" data-splide='{"type":"loop","perPage":3}'>
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-92866.jpg" alt=""></li>
+        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-221299.jpg" alt=""></li>
+        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-534362.jpg" alt=""></li>
+        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-2957060.webp" alt="">
+        </li>
+        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-3056057.jpg" alt="">
+        </li>
+        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-3182452.jpg" alt="">
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+
+    {% block content %}{% endblock %}
+
+  </div>
+</body>
+<script>
+  new Splide('.splide').mount();
+</script>
+
 </html>
