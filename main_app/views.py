@@ -3,7 +3,7 @@ from django.views.generic.base import TemplateView
 from django.http import HttpResponse 
 
 class Home(TemplateView):
-    template_name = "home.html"
-    
+    template_name = 'home.htm'
+
 
     
