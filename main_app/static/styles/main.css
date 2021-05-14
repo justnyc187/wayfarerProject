@@ -1,0 +1,31 @@
+body{
+    background-color: #faf2da;
+}
+
+.navbar-brand{
+    background-color: #35d0ba; 
+}
+
+.header{
+    width: 100vw;
+    background-color: #35d0ba;
+}
+
+.container{
+    background-color: #35d0ba;
+    margin: 0 0 0 0;
+}
+
+.show-img{
+    width:600px;
+    height: 500px;
+    object-fit: cover;
+}
+.splide{
+    height: 600px;
+    margin: auto;
+    padding-top: 20px;
+}
+.splide__slide{
+    margin-right: 0;
+}
