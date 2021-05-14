@@ -6,4 +6,4 @@ class Home(TemplateView):
     template_name = 'home.htm'
 
 
-    
+
