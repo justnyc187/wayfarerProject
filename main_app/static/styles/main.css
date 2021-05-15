@@ -12,28 +12,15 @@ body{
 }
 
 .container{
-    /* background-color: #35d0ba; */
     margin: 0 0 0 0;
 }
-
 .show-img{
     width: 100vw;
     height: 400px;
-    object-fit: cover;
-}
-.splide{
-    object-fit: cover;
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
 }
 .splide__slide{
     margin-right: 0;
 }
-
 .navbar-item{
     text-decoration: none;
-}
-a{
-    color: rgba(243, 102, 46, 0.76)
 }
