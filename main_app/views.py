@@ -26,7 +26,8 @@ class SignUp(View):
         else:
             return redirect("signup")
 
-
+class Test(TemplateView):
+    template_name = "test.html"
 
 
 # '''
