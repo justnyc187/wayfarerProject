@@ -1,16 +1,13 @@
 body{
     background-color: #faf2da;
 }
-
 .navbar-brand{
     background-color: #35d0ba; 
 }
-
 .header{
     width: 100vw;
     background-color: #35d0ba;
 }
-
 .container{
     margin: 0 0 0 0;
 }
@@ -23,4 +20,77 @@ body{
 }
 .navbar-item{
     text-decoration: none;
+}
+.home-cmt{
+    display: flex;
+    padding: 10px;
+    list-style-type: none;
+}
+.home-h3{
+    text-align: center;
+    padding-top: 15px;
+}
+.home-li{
+    padding: 10px;
+}
+.home-div{
+    border-style: solid;
+    border-color: coral;
+    border-radius: 5px;
+    border-width: 5px;
+    margin-left: 15px;
+}
+.cities-ul{
+    border-style: solid;
+    border-color: coral;
+    margin-right: 650px;
+    margin-top:  50px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    padding-right: 10px;
+    background-color: coral;
+}
+.header-cities, .search-home{
+    border-style: solid;
+    border-color: coral;
+    margin-top: 10px;
+    padding: 15px 0px 15px 5px;
+    border-radius: 5px;
+}
+.cities-h5{
+    padding-top: 10px;
+    padding-left: 35px;
+}
+.home-li{
+    position: relative;
+    margin: 8px;
+    list-style: none;
+}
+.img-li{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    position: relative;
+    left: -20px;
+}
+.home-li-img{
+    position: relative;
+    border-style: solid;
+    border-color: coral;
+    margin: 8px;
+    list-style: none;
+    padding: 10px 10px 10px 40px;
+    border-radius: 5px;
+    background-color: #faf2da;
+}
+li{
+    list-style: none;
+}
+button{
+    width: 400px;
+}
+.header{
+    display: inline-block;
 }

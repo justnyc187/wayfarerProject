@@ -1,9 +1,6 @@
 {% load static %}
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,7 +15,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wayfarer</title>
 </head>
-
 <body>
   <div class="container">
     <div class="row header">
@@ -27,22 +23,18 @@
           <a class="navbar-item" href="/">Wayfarer</a>
         </div>
         <div>
-          <a class="navbar-item" href="account/register">Sign Up</a>
+          <a class="navbar-item" href="{%url 'signup'%}">Sign Up</a>
         </div>
         <div>
-          <a class="navbar-item col-4" href="">Sign In</a>
+          <a class="navbar-item col-4" href="{%url 'login'%}">Sign In</a>
         </div>
       </nav>
     </div>
   </div>
-
-
     {% block content %}{% endblock %}
-
   </div>
 </body>
 <script>
   new Splide('.splide').mount();
 </script>
-
 </html>
