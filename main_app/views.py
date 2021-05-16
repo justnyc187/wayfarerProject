@@ -26,6 +26,11 @@ class SignUp(View):
         else:
             return redirect("signup")
 
+class Profile(TemplateView):
+    template_name = "profile.html"
+    
+
+
 
 
 
