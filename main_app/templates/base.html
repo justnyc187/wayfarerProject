@@ -18,21 +18,37 @@
 <body>
   <div class="container">
     <div class="row header">
+    {% comment %} ADD LOGOUT TO auth {% endcomment %}
+    {%if user.is_authenticated%}
       <nav class="navbar is-black" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand col-4">
-          <a class="navbar-item" href="/">Wayfarer</a>
-        </div>
-        <div>
-          <a class="navbar-item" href="{%url 'signup'%}">Sign Up</a>
-        </div>
-        <div>
-          <a class="navbar-item col-4" href="{%url 'login'%}">Sign In</a>
-        </div>
+          <div class="navbar-brand col-4">
+            <a class="navbar-item" href="/">Wayfarer</a>
+          </div>
+          <div>
+            <a class="navbar-item col-4" href="{%url 'logout'%}">Logout</a>
+          </div>
+        <header class="header-cities">
+          <form action="" method="GET"></form>
+            <input class="search-home" type="text" name="style" placeholder="Search">
+          </form>
+        </header> 
       </nav>
+    {%else%}
+      <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand col-4">
+            <a class="navbar-item" href="/">Wayfarer</a>
+          </div>
+          <div>
+            <a class="navbar-item" href="{%url 'signup'%}">Sign Up</a>
+          </div>
+          <div>
+            <a class="navbar-item col-4" href="{%url 'login'%}">Sign In</a>
+          </div>
+      </nav>
+      {%endif%}
     </div>
   </div>
     {% block content %}{% endblock %}
-  </div>
 </body>
 <script>
   new Splide('.splide').mount();

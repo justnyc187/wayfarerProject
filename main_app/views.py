@@ -28,6 +28,8 @@ class SignUp(View):
 
 class Profile(TemplateView):
     template_name = "profile.html"
+    
+
 
 
 
