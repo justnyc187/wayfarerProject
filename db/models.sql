@@ -1,16 +1,6 @@
-\connect wayfarer
-
-CREATE TABLE users
-(id SERIAL PRIMARY KEY, name varchar(50), code varchar(200));
-
--- CREATE TABLE posts
--- (id SERIAL PRIMARY KEY, name varchar(100), body varchar(500));
-
--- CREATE TABLE cities
--- (id SERIAL PRIMARY KEY, name varchar(255), code varchar(200));
-
-
- -- class posts(models.Model):
-
---     name = models.CharField(max_length=100)
---     body = models.CharField(max_length=500)
+INSERT INTO main_app_cities(name, img, content)
+  VALUES
+    ('New York', 'main_app/static/styles/images/newyork.jpg', 'The Big Apple'),
+    ('Jersey City', 'main_app/static/styles/images/newjersey.jpg', 'Everythings bigger in Texas'),
+    ('Los Angeles', 'main_app/static/images/california.jpg', 'Golden gate bridge');
+SELECT * FROM main_app_cities;
