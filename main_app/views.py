@@ -4,7 +4,10 @@ from django.http import HttpResponse # <- a class to handle sending a type of re
 from django.views.generic.base import TemplateView
 from django.views import View 
 from django.contrib.auth.forms import UserCreationForm 
-from django.contrib.auth import login 
+from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
 
 # Create your views here.
 
@@ -25,6 +28,12 @@ class SignUp(View):
             return redirect("/")
         else:
             return redirect("signup")
+
+@method_decorator(login_required, name='dispatch')
+class Profile(TemplateView):
+    template_name = "profile.html"
+
+
 
 
 
