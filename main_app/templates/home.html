@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
-<div class="splide row" data-splide='{"type":"loop","perPage":1}'>
+<div class="splide row" data-splide='{"type":"loop", "perPage":1}'>
     <div class="col">
         <div class="splide__track">
             <ul class="splide__list">
@@ -14,13 +14,31 @@
         </div>
     </div>
 </div>
-    <div class="container">
+
     <h3 class="home-h3">Wayfarer is ...</h3>
-    <div>
+
+    <div class="lorem">
         <ul class="home-cmt">
             <li class="home-li"><h4 class="home-h4">Topic</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iure consequatur, repudiandae aliquam vitae modi beatae, laborum molestiae quia tempora ipsa pariatur provident suscipit, sit sequi asperiores dicta ducimus praesentium?</li>
             <li class="home-li"><h4 class="home-h4">Topic</h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et minima, accusamus animi consequuntur nulla labore tempora. Tempora, suscipit quia nam nostrum in perferendis mollitia optio sunt, nulla aliquam pariatur autem.</li>
             <li class="home-li"><h4 class="home-h4">Topic</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatum sint recusandae deserunt laudantium animi fugit exercitationem cupiditate eligendi earum obcaecati delectus eius aperiam in, repellendus quod. Saepe, nesciunt doloremque!</li>
+        </ul>
+    </div>
+
+    <div class="container home-div">
+        <div>
+        <header class="header-cities">Wayfarer
+                <form action="" method="GET"></form>
+                    <input class="search-home" type="text" name="style" placeholder="Search">
+                </form>
+        </header>
+        </div>
+        <ul class="cities-ul">
+            <h5 class="cities-h5">Cities</h5>
+           <li class="home-li-img"><img class="img-li" src="https://i.pinimg.com/474x/b8/54/4f/b8544f33b7a2f0394a38af9bdaf56dc1.jpg" alt="">London</li>
+            <li class="home-li-img"><img class="img-li" src="https://www.sl.nsw.gov.au/sites/default/files/image_16_0.jpg" alt="">Sydney</li>
+            <li class="home-li-img"><img class="img-li" src="https://clickamericana.com/wp-content/uploads/Vintage-San-Francisco-Chinatown-postcards-from-the-1970s.jpg-1-750x455.jpg" alt="">San Francisco</li>
+            <li class="home-li-img"><img class="img-li" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVfxMAEUQ8Fl_39ban5QvWW0-Ybg8yywN-LQ&usqp=CAU" alt="">Seattle</li>
         </ul>
     </div>
 {% endblock %}
