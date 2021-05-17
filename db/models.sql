@@ -1,10 +1,12 @@
-INSERT INTO main_app_cities(name, img, content)
-  VALUES
-    ('New York', 'main_app/static/styles/images/newyork.jpg', 'The Big Apple'),
-    ('Jersey City', 'main_app/static/styles/images/newjersey.jpg', 'Everythings bigger in Texas'),
-    ('Los Angeles', 'main_app/static/images/california.jpg', 'Golden gate bridge');
 
-SELECT * FROM main_app_cities;
+INSERT INTO main_app_city(name, img, content)
+    VALUES 
+        ('Hello', '/images/newyork.jpg', 'The Big Apple'),
+        ('Jersey City', '/images/newjersey.jpg', 'Everythings bigger in Texas'),
+        ('Los Angeles', '/images/california.jpg', 'Golden gate bridge');
 
 
--- DROP TABLE main_app_cities; 
+-- delete row + UPDATE 
+-- remove match based Id 
+
+
