@@ -1,5 +1,6 @@
 body{
     background-color: #faf2da;
+    color: #353535;
 }
 .navbar-brand{
     background-color: #35d0ba; 
@@ -35,14 +36,14 @@ body{
 }
 .home-div{
     border-style: solid;
-    border-color: coral;
+    border-color: #FC9234;
     border-radius: 5px;
     border-width: 5px;
     margin-left: 15px;
 }
 .cities-ul{
     border-style: solid;
-    border-color: coral;
+    border-color: #FC9234;
     margin-right: 650px;
     margin-top:  50px;
     border-radius: 5px;
@@ -50,11 +51,11 @@ body{
     padding-bottom: 10px;
     position: relative;
     padding-right: 10px;
-    background-color: coral;
+    background-color: #FC9234;
 }
 .header-cities, .search-home{
     border-style: solid;
-    border-color: coral;
+    border-color: #FC9234;
     margin-top: 10px;
     padding: 15px 0px 15px 5px;
     border-radius: 5px;
@@ -78,7 +79,7 @@ body{
 .home-li-img{
     position: relative;
     border-style: solid;
-    border-color: coral;
+    border-color: #FC9234;
     margin: 8px;
     list-style: none;
     padding: 10px 10px 10px 40px;
@@ -94,7 +95,9 @@ button{
 .header{
     display: inline-block;
 }
-
-.search{
-    
+.auth_form{ 
+    background-color: #faf2da;
+    border-radius: 20px;
+    border-color: #FC9234;
+    color: #353535;
 }
