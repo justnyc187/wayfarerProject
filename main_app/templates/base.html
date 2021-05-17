@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,19 +17,21 @@
 <body>
   <div class="container">
     <div class="row header">
+      {% comment %} ADD LOGOUT TO auth {% endcomment %}
     {%if user.is_authenticated%}
       <nav class="navbar is-black" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand col-4">
-            <a class="navbar-item" href="/">Wayfarer</a>
-          </div>
-          <div>
-            <a class="navbar-item col-4" href="{%url 'logout'%}">Logout</a>
-          </div>
-        <header class="header-cities">
+        <div class="navbar-brand col-4">
+          <a class="navbar-item" href="/">Wayfarer</a>
+        </div>
+        <div>
+          <a class="navbar-item" href="{%url 'signup'%}">Sign Up</a>
+        </div>
+        <div>
+          <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
+        </div>
           <form action="" method="GET"></form>
-            <input class="search-home" type="text" name="style" placeholder="Search">
+              <input class="search-home" type="text" name="style" placeholder="Search">
           </form>
-        </header> 
       </nav>
     {%else%}
       <nav class="navbar is-black" role="navigation" aria-label="main navigation">
@@ -47,7 +48,14 @@
       {%endif%}
     </div>
   </div>
+
+
+
+
+  </div>
+
     {% block content %}{% endblock %}
+
 </body>
 <script>
   new Splide('.splide').mount();

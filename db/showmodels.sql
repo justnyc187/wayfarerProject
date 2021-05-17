@@ -1,0 +1,1 @@
+SELECT * FROM main_app_city;
