@@ -1,10 +1,7 @@
 {% load static %}
-
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,49 +15,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wayfarer</title>
 </head>
-
 <body>
   <div class="container">
     <div class="row header">
+    {% comment %} ADD LOGOUT TO auth {% endcomment %}
+    {%if user.is_authenticated%}
       <nav class="navbar is-black" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand col-4">
-          <a class="navbar-item" href="/">Wayfarer</a>
-        </div>
-        <div>
-          <a class="navbar-item" href="account/register">Sign Up</a>
-        </div>
-        <div>
-          <a class="navbar-item col-4" href="">Sign In</a>
-        </div>
+          <div class="navbar-brand col-4">
+            <a class="navbar-item" href="/">Wayfarer</a>
+          </div>
+          <div>
+            <a class="navbar-item col-4" href="{%url 'logout'%}">Logout</a>
+          </div>
+        <header class="header-cities">
+          <form action="" method="GET"></form>
+            <input class="search-home" type="text" name="style" placeholder="Search">
+          </form>
+        </header> 
       </nav>
+    {%else%}
+      <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand col-4">
+            <a class="navbar-item" href="/">Wayfarer</a>
+          </div>
+          <div>
+            <a class="navbar-item" href="{%url 'signup'%}">Sign Up</a>
+          </div>
+          <div>
+            <a class="navbar-item col-4" href="{%url 'login'%}">Sign In</a>
+          </div>
+      </nav>
+      {%endif%}
     </div>
   </div>
-  <div class="splide row" data-splide='{"type":"loop","perPage":1}'>
-    <div class="col">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-92866.jpg" alt=""></li>
-        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-221299.jpg" alt=""></li>
-        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-534362.jpg" alt=""></li>
-        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-2957060.webp" alt="">
-        </li>
-        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-3056057.jpg" alt="">
-        </li>
-        <li class="splide__slide"><img class="show-img" src="/static/styles/images/pexels-photo-3182452.jpg" alt="">
-        </li>
-      </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-
     {% block content %}{% endblock %}
-
-  </div>
 </body>
 <script>
   new Splide('.splide').mount();
 </script>
-
 </html>
