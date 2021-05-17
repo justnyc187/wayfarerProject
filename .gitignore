@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> fe7a755bc250bd7f01f528bad898973c12f28c08
 # Created by https://www.toptal.com/developers/gitignore/api/django
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
 
@@ -162,10 +159,13 @@ Thumbs.db
 .prof
 
 
-<<<<<<< HEAD
+
 # End of https://www.toptal.com/developers/gitignore/api/django
-=======
+
+
+# End of https://www.toptal.com/developers/gitignore/api/django
+
 # End of https://www.toptal.com/developers/gitignore/api/django
 # settings
 .vscode
->>>>>>> fe7a755bc250bd7f01f528bad898973c12f28c08
+
