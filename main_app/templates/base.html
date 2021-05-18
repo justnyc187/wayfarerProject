@@ -13,6 +13,7 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script src="{% static 'scripts/main.js' %}" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wayfarer</title>
 </head>
@@ -41,12 +42,38 @@
             <a class="navbar-item" href="/">Wayfarer</a>
           </div>
           <div>
-            <a class="navbar-item" href="{%url 'signup'%}">Sign Up</a>
+            <a class="navbar-item" id="myBtn">Sign Up</a>
           </div>
           <div>
-            <a class="navbar-item col-4" href="{%url 'login'%}">Sign In</a>
+            <a class="navbar-item col-4" id="myBtn2">Sign In</a>
           </div>
       </nav>
+        </head>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+                <h1 class="title">Log In</h1>
+                  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" class="btn" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+                  </form>
+                <h2 class="title">Sign Up</h1>
+                  <form method="post" action="{% url 'signup' %}">
+                    {% csrf_token %} {{ form.as_p }}
+                    <input type="submit" class="btn" value="Sign Up" />
+                    <input type="hidden" name="next" value="{{ next }}" />
+                  </form>
+          </div>
+        </div>
+      </div>
+        
+
+        </script>
+      
       {%endif%}
     </div>
   </div>

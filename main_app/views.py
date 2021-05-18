@@ -12,8 +12,11 @@ from .models import City
 
 # Create your views here.
 
-class Home(TemplateView):
-    template_name = "home.html"
+class Home(View):
+    def get(self, request):
+        form = UserCreationForm()
+        context = {"form": form}
+        return render(request, "home.html", context)
 
 class SignUp(View):
     def get(self, request):
