@@ -188,3 +188,6 @@ button{
         padding-bottom: 550px;
     }
 
+    .splide__track{
+        height: 500px;
+    }
