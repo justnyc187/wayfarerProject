@@ -56,7 +56,6 @@
           </div>
       </nav>
         </head>
-
         <!-- The Modal -->
         <div id="myModal" class="modal">
           <!-- Modal content -->
@@ -64,36 +63,30 @@
             <span class="close">&times;</span>
                 <h1 class="title">Log In</h1>
                   <form method="post" action="{% url 'login' %}">
-    {% csrf_token %} {{ form.as_p }}
-    <input type="submit" class="btn" value="login" />
-    <input type="hidden" name="next" value="{{ next }}" />
+                  {% csrf_token %} 
+                    <input type="text" id="username" name="username" placeholder="Username" /><br>
+                    <input type="password" id="password" name="password" placeholder="Password" /><br>
+                    <input type="submit" name="Submit" id="submit" value="Submit">
                   </form>
-                <h2 class="title">Sign Up</h1>
+                <h2 class="title">Sign Up</h2>
                   <form method="post" action="{% url 'signup' %}">
-                    {% csrf_token %} {{ form.as_p }}
-                    <input type="submit" class="btn" value="Sign Up" />
-                    <input type="hidden" name="next" value="{{ next }}" />
+                    {% csrf_token %} {{form.as_p}}  
+                    <input type="text" name="location" placeholder="location info">
+                    <br>
+                    <input type="submit" name="Submit" id="submit" value="Sign Up">
                   </form>
           </div>
         </div>
       </div>
-        
-
         </script>
-      
       {%endif%}
     </div>
   </div>
-
-
-
-
   </div>
-
     {% block content %}{% endblock %}
-
 </body>
 <script>
   new Splide('.splide').mount();
 </script>
 </html>
+

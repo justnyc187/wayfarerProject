@@ -1,16 +1,27 @@
 {% extends 'base.html' %} 
 {%block content%}
-<ul class="cities-ul">
-       <h5 class="cities-h5">Cities</h5>
-    
 
-       <li class="home-li-img"><img class="img-li" src="https://i.pinimg.com/474x/b8/54/4f/b8544f33b7a2f0394a38af9bdaf56dc1.jpg" alt="">London</li>
-       <li class="home-li-img"><img class="img-li" src="https://www.sl.nsw.gov.au/sites/default/files/image_16_0.jpg" alt="">Sydney</li>
-       <li class="home-li-img"><img class="img-li" src="https://clickamericana.com/wp-content/uploads/Vintage-San-Francisco-Chinatown-postcards-from-the-1970s.jpg-1-750x455.jpg" alt="">San Francisco</li>
-       <li class="home-li-img"><img class="img-li" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVfxMAEUQ8Fl_39ban5QvWW0-Ybg8yywN-LQ&usqp=CAU" alt="">Seattle</li>
-</ul> 
+    <div class="profile"> 
+    <div>
+        <ul class="cities-ul">
+            <h5 class="cities-h5">Cities</h5>
+                <li class="home-li-img"><img class="img-li" src="https://i.pinimg.com/474x/b8/54/4f/b8544f33b7a2f0394a38af9bdaf56dc1.jpg" alt="">London</li>
+                <li class="home-li-img"><img class="img-li" src="https://www.sl.nsw.gov.au/sites/default/files/image_16_0.jpg" alt="">Sydney</li>
+                <li class="home-li-img"><img class="img-li" src="https://clickamericana.com/wp-content/uploads/Vintage-San-Francisco-Chinatown-postcards-from-the-1970s.jpg-1-750x455.jpg" alt="">San Francisco</li>
+                <li class="home-li-img"><img class="img-li" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVfxMAEUQ8Fl_39ban5QvWW0-Ybg8yywN-LQ&usqp=CAU" alt="">Seattle</li>
+        </ul>
+    </div>
+   <div class="profile-post">
+        <a href={% url 'profile_update' user.pk %}>Edit username</a> 
+        <p><strong>Username:</strong>{{user.username}}</p>
+        <p><strong>Current Location:</strong> {{user.profile.location}}</p>
+        <p><strong>Joined on:</strong> {{user.profile.created_at}}</p>
+        <ul>
+        {% for post in user.posts.all %}
+            <a href="{% url 'post_detail' post.pk %}"><li>{{post.title}}</li></a>
+        {% endfor %}
+        <ul>
+   </div>
+</div>
+{% endblock %}
 
-{{user.username}}
-
-
-    {% endblock %}
