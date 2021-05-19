@@ -96,14 +96,17 @@ body{
     /* margin: 20px; */
 }
 li{
-    list-style: none;
+    /* list-style: none; */
     /* height: 150px; */
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
     color: #353535;
 }
 button{
-    width: 400px;
+    width:250px; 
+    color: rgb(19, 108, 94);
+    background:  #35d0ba; 
+    font-family: 'Roboto', sans-serif;
 }
 .header{
     display: inline-block;
@@ -191,9 +194,32 @@ p{
     margin-bottom: 0;
 }
 
-.profile_item {
+.profile-post .profinfo{
+    text-align: left; 
     margin-top: 20px; 
+    margin-left: 5px; 
+    padding: 0 auto; 
+    font-size: 30px;
 }
-.post-info {
+
+
+.edit-username {
+    margin-left:5px 
+}
+
+li .posts{
+    text-align: left;
+    margin-left: 5px; 
+}
+
+#edit-user{
+    float: right; 
+    font-weight:bold;
+}
+
+.profile-header{
+    font-size: 50px; 
     text-align: center; 
+    color: #353535; 
+    
 }

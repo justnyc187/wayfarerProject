@@ -1,7 +1,6 @@
 {% extends 'base.html' %} 
 {%block content%}
-
-    <div class="profile"> 
+<div class="profile"> 
     <div>
         <ul class="cities-ul">
             <h5 class="cities-h5">Cities</h5>
@@ -12,15 +11,18 @@
         </ul>
     </div>
    <div class="profile-post">
-        <a href={% url 'profile_update' user.pk %}>Edit username</a> 
-        <p><strong>Username:</strong>{{user.username}}</p>
-        <p><strong>Current Location:</strong> {{user.profile.location}}</p>
-        <p><strong>Joined on:</strong> {{user.profile.created_at}}</p>
+        <h2 class="profile-header">Account Info:</h2>
+        <p class="profinfo"><strong>Username:</strong>{{user.username}}<span id="edit-user"><button id="edituserbutton" href={% url 'profile_update' user.pk %}><b>Edit username</b></button></span></p>
+        <p class="profinfo"><strong>Current Location:</strong> {{user.profile.location}}</p>
+        <p class="profinfo"><strong>Joined on:</strong> {{user.profile.created_at}}</p>
+        <hr>
         <ul>
+        <h2 class="profile-header">Post History:</h2>
+        <ol>
         {% for post in user.posts.all %}
-            <a href="{% url 'post_detail' post.pk %}"><li>{{post.title}}</li></a>
+            <li><a class="posts" href="{% url 'post_detail' post.pk %}">{{post.title}}</a></li>
         {% endfor %}
-        <ul>
+        </ol>
    </div>
 </div>
 {% endblock %}
